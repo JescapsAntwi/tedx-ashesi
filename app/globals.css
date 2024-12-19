@@ -3,25 +3,59 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 255, 255, 255;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom animations */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
   }
 }
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Loading animation */
+.loading-dots div {
+  animation: loading 1.4s cubic-bezier(0.8, 0, 0.2, 1) infinite;
+}
+
+.loading-dots div:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loading-dots div:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes loading {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
