@@ -10,7 +10,7 @@ export default function EditHomePage() {
       title: 'Hero Section',
       content: 'Ideas worth spreading at Ashesi University',
       hasImage: true,
-      image: '/campus-night.jpg'
+      image: '/campus-night.png'
     },
     {
       id: 'featured',

@@ -28,7 +28,7 @@ export default function Home() {
       <section className="relative h-screen px-4 md:px-8 pt-24">
         <div className="relative h-full rounded-[2rem] overflow-hidden">
           <Image
-            src="/campus-night.jpg"
+            src="/campus-night.png"
             alt="Ashesi University at night"
             fill
             className="object-cover"
@@ -45,7 +45,7 @@ export default function Home() {
               className="space-y-6"
             >
               <motion.h1 
-                className="text-6xl md:text-8xl font-bold"
+                className="text-4xl sm:text-6xl md:text-8xl font-bold"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
@@ -203,7 +203,7 @@ export default function Home() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
             {[1, 2, 3].map((i) => (
               <motion.div
                 key={i}
@@ -255,7 +255,7 @@ export default function Home() {
               Subscribe to our newsletter to receive updates about upcoming events 
               and inspiring stories.
             </p>
-            <form className="max-w-md mx-auto flex gap-4">
+            <form className="max-w-md mx-auto flex flex-col sm:flex-row gap-4">
               <input
                 type="email"
                 placeholder="Enter your email"
@@ -263,7 +263,7 @@ export default function Home() {
               />
               <button
                 type="submit"
-                className="bg-red-600 text-white px-6 py-2 rounded-full hover:bg-red-700 transition-colors"
+                className="w-full sm:w-auto bg-red-600 text-white px-6 py-2 rounded-full hover:bg-red-700 transition-colors"
               >
                 Subscribe
               </button>
