@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 // Sample team data - you should replace this with your actual team data
 const teamData = {
@@ -420,9 +421,11 @@ export default function TeamPage() {
                   className="bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-xl"
                 >
                   <div className="aspect-w-1 aspect-h-1">
-                    <img
+                    <Image
                       src={member.image}
                       alt={member.name}
+                      width={400}
+                      height={400}
                       className="object-cover w-full h-full transition-transform duration-300 hover:scale-105"
                     />
                   </div>

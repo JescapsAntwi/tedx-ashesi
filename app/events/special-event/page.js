@@ -93,7 +93,7 @@ export default function SpecialEvent() {
                 <span className="font-bold min-w-[100px]">9:00 AM</span>
                 <div>
                   <h4 className="font-bold">Opening Ceremony</h4>
-                  <p className="text-gray-600">Welcome address and introduction to the day's events</p>
+                  <p className="text-gray-600">Welcome address and introduction to the day&apos;s events</p>
                 </div>
               </li>
               <li className="flex items-start space-x-4">
@@ -128,7 +128,7 @@ export default function SpecialEvent() {
                 <span className="font-bold min-w-[100px]">5:00 PM</span>
                 <div>
                   <h4 className="font-bold">Closing Remarks</h4>
-                  <p className="text-gray-600">Reflection on the day's events and future outlook</p>
+                  <p className="text-gray-600">Reflection on the day&apos;s events and future outlook</p>
                 </div>
               </li>
             </ul>

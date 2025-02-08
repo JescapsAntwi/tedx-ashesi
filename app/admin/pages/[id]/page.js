@@ -15,7 +15,7 @@ export default function EditPage({ params }) {
 
   useEffect(() => {
     fetchPage()
-  }, [params.id])
+  }, [fetchPage])
 
   const fetchPage = async () => {
     try {
