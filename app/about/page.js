@@ -46,29 +46,10 @@ export default function About() {
             <p className="text-lg text-gray-600">
               In the spirit of ideas worth spreading, TEDx is a program of local, self-organized events that bring people together to share a TED-like experience. At a TEDx event, TEDTalks video and live speakers combine to spark deep discussion and connection in a small group. These local, self-organized events are branded TEDx, where x = independently organized TED event.
             </p>
-            <h2 className="text-3xl font-bold">Our Team</h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              {[1, 2, 3].map((i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: i * 0.2 }}
-                  className="text-center"
-                >
-                  <div className="relative w-40 h-40 mx-auto mb-4">
-                    <Image
-                      src="/placeholder.svg"
-                      alt={`Team Member ${i}`}
-                      fill
-                      className="object-cover rounded-full"
-                    />
-                  </div>
-                  <h3 className="text-xl font-bold">Team Member Name</h3>
-                  <p className="text-gray-600">Position</p>
-                </motion.div>
-              ))}
-            </div>
+            <h2 className="text-3xl font-bold">Our Vision</h2>
+            <p className="text-lg text-gray-600">
+              Our vision is to establish TEDxAshesiUniversity as the premier platform for transformative ideas and meaningful dialogue in Ghana. We strive to create an ecosystem where innovative thoughts flourish, where diverse voices are amplified, and where groundbreaking ideas catalyze positive change throughout our nation. Through carefully curated events and engaging content, we aim to inspire the next generation of thinkers, doers, and leaders who will shape Ghana's future.
+          </p>
           </motion.div>
         </div>
       </section>
