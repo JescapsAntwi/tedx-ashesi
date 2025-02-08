@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
 
@@ -40,6 +41,7 @@ const menuVariants = {
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isOpen, setIsOpen] = useState(false)
+  const pathname = usePathname()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -56,6 +58,13 @@ export default function Navbar() {
     { href: '/events', label: 'EVENTS' },
     { href: '/contact', label: 'CONTACT' },
   ]
+
+  const isActiveLink = (href) => {
+    if (href === '/') {
+      return pathname === '/'
+    }
+    return pathname.startsWith(href)
+  }
 
   return (
     <div className={`fixed w-full z-50 px-4 md:px-8 ${isScrolled ? 'mt-4' : ''}`}>
@@ -92,11 +101,15 @@ export default function Navbar() {
                   <Link
                     href={item.href}
                     className={`text-sm font-medium transition-colors duration-300 hover:text-red-600 relative group ${
-                      item.href === '/' ? 'text-red-600' : ''
+                      isActiveLink(item.href) ? 'text-red-600' : ''
                     }`}
                   >
                     {item.label}
-                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-red-600 transition-all duration-300 group-hover:w-full"></span>
+                    <span 
+                      className={`absolute -bottom-1 left-0 h-0.5 bg-red-600 transition-all duration-300 ${
+                        isActiveLink(item.href) ? 'w-full' : 'w-0 group-hover:w-full'
+                      }`}
+                    ></span>
                   </Link>
                 </motion.div>
               ))}
@@ -133,7 +146,9 @@ export default function Navbar() {
                     >
                       <Link
                         href={item.href}
-                        className="text-sm font-medium hover:text-red-600 transition-colors duration-300"
+                        className={`text-sm font-medium transition-colors duration-300 hover:text-red-600 ${
+                          isActiveLink(item.href) ? 'text-red-600' : ''
+                        }`}
                         onClick={() => setIsOpen(false)}
                       >
                         {item.label}
