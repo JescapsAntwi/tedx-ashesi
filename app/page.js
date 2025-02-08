@@ -26,7 +26,7 @@ export default function Home() {
   return (
     <>
       <section className="relative h-screen px-4 md:px-8 pt-24">
-        <div className="relative h-full rounded-[2rem] overflow-hidden">
+        <div className="relative h-full rounded-2xl overflow-hidden transition-transform duration-300 hover:scale-[1.02]">
           <Image
             src="/campus-night.png"
             alt="Ashesi University at night"
@@ -115,7 +115,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="bg-white rounded-lg shadow-xl overflow-hidden"
+            className="bg-white rounded-2xl shadow-xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:scale-[1.02]"
           >
             <div className="md:flex">
               <div className="md:flex-shrink-0 relative w-full md:w-96 h-64 md:h-auto">
@@ -123,7 +123,7 @@ export default function Home() {
                   src="/special-event-banner.jpg"
                   alt="TEDxAshesiUniversity: Reimagine"
                   fill
-                  className="object-cover"
+                  className="object-cover rounded-2xl"
                 />
               </div>
               <div className="p-8">
@@ -158,7 +158,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="grid md:grid-cols-2 gap-12 items-center"
+            className="grid md:grid-cols-2 gap-12 items-center transition-transform duration-300 hover:scale-[1.02]"
           >
             <div className="space-y-6">
               <h2 className="text-4xl font-bold">About TEDx</h2>
@@ -179,7 +179,7 @@ export default function Home() {
                 src="/tedx-about.jpg"
                 alt="TEDx Event"
                 fill
-                className="object-cover rounded-lg"
+                className="object-cover rounded-2xl"
               />
             </div>
           </motion.div>
@@ -211,14 +211,14 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: i * 0.2 }}
                 viewport={{ once: true }}
-                className="bg-white rounded-lg overflow-hidden shadow-lg"
+                className="bg-white rounded-2xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-[1.02] hover:-translate-y-1"
               >
                 <div className="relative h-48">
                   <Image
                     src={`/event-${i}.jpg`}
                     alt={`Event ${i}`}
                     fill
-                    className="object-cover"
+                    className="object-cover rounded-2xl"
                   />
                 </div>
                 <div className="p-6">
